@@ -1,0 +1,5 @@
+hero-pizza: https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/hero-pizza-VfREaST9G2JTFrxvuYtYgW.webp
+restaurant-ambiance: https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/restaurant-ambiance-YDHxzgCYSE3u4zVnbYpryW.webp
+pizza-white: https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/pizza-white-Jb6X9bhNKffZrjWiCNfqGk.webp
+pizza-tropicale: https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/pizza-tropicale-4nWviPWujrndMizf4RqrPL.webp
+chocolate-mousse: https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/chocolate-mousse-dW4TvCLtxi5y6CiNrrKaPR.webp

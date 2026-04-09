@@ -1,0 +1,15 @@
+Site Review Notes:
+1. Hero section: Looks great, gold accents, CTA visible, rating badge
+2. About section: Text reveal works, restaurant image + stats visible. Stats counters are animating but showing low numbers (15+, 189, 3.4) - need to check if they animate to final values
+3. Menu section: 3 dish cards with images, menu categories below - looks good
+4. Why Us section: 4 feature cards with icons - clean layout
+5. Gallery section: Photo grid with hover effects - looks great
+6. Reviews section: Rating distribution bars, 4 review cards, tags - well done
+7. Contact section: Google Map working with marker, contact form, hours table
+8. Footer: 3-column layout with nav, contact info
+9. Floating CTA: Phone button visible at bottom right
+
+Issues to address:
+- The counter animation in About section may need verification
+- Overall the site looks polished and professional
+- All images loading correctly from CDN
