@@ -37,6 +37,7 @@ export default function Footer() {
                 { label: "Accueil", href: "#hero" },
                 { label: "Notre Histoire", href: "#about" },
                 { label: "Menu", href: "#menu" },
+                { label: "Réservation", href: "#reservation" },
                 { label: "Avis", href: "#reviews" },
                 { label: "Contact", href: "#contact" },
               ].map((link) => (

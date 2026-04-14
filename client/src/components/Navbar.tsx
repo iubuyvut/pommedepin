@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, CalendarDays } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,6 +15,7 @@ export default function Navbar() {
     { label: "Accueil", href: "#hero" },
     { label: "Notre Histoire", href: "#about" },
     { label: "Menu", href: "#menu" },
+    { label: "Réservation", href: "#reservation" },
     { label: "Avis", href: "#reviews" },
     { label: "Contact", href: "#contact" },
   ];
@@ -55,12 +56,12 @@ export default function Navbar() {
         {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-4">
           <a
-            href="tel:023742736"
+            href="#reservation"
             className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-gold text-background rounded-full text-sm font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,169,110,0.3)]"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
-            <Phone className="w-4 h-4" />
-            Appeler
+            <CalendarDays className="w-4 h-4" />
+            Réserver
           </a>
 
           <button
@@ -92,12 +93,13 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="tel:023742736"
+            href="#reservation"
             className="flex items-center justify-center gap-2 px-5 py-3 bg-gold text-background rounded-full text-sm font-semibold mt-2"
             style={{ fontFamily: "'Outfit', sans-serif" }}
+            onClick={() => setMobileOpen(false)}
           >
-            <Phone className="w-4 h-4" />
-            02 374 27 36
+            <CalendarDays className="w-4 h-4" />
+            Réserver une table
           </a>
         </div>
       </div>

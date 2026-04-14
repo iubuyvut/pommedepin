@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import MenuSection from "@/components/MenuSection";
+import ReservationSection from "@/components/ReservationSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import GallerySection from "@/components/GallerySection";
@@ -22,6 +23,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <MenuSection />
+      <ReservationSection />
       <WhyUsSection />
       <GallerySection />
       <ReviewsSection />

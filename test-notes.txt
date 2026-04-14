@@ -1,0 +1,20 @@
+Reservation Section Testing Notes:
+1. Section header "Réservez votre table" - renders correctly with gold italic accent
+2. Step progress bar shows: Date & Heure | Vos Coordonnées | Confirmation - working
+3. Calendar renders correctly for April 2026 with navigation arrows
+4. Date selection works - clicked April 19 (Sunday) and it highlighted in gold
+5. Time slots appeared after date selection: 19:00, 19:30, 20:00, 20:30, 21:00, 21:30
+6. Guest count selector: 1-8 individual buttons + "9+" button, default is 2
+7. "Continuer" button visible at bottom
+8. Note about groups > 10 persons with phone link visible
+9. Navbar shows "RÉSERVATION" link and "Réserver" CTA button - both working
+10. Hero shows "Réserver une table" as primary CTA - working
+11. Footer includes "Réservation" in navigation links
+
+Issues found:
+- The calendar shows days starting from column 3 (Wednesday) for April 2026 which is correct (April 1, 2026 is a Wednesday)
+- Monday dates appear dimmed with red dot (closed) - correct
+- Time slots for Sunday show 6 slots (19:00-21:30) - correct (not Fri/Sat extended hours)
+- Need to verify the full flow: select time -> select guests -> continue -> fill details -> confirm
+
+Overall: Reservation section looks polished and functional!

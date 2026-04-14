@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Star, ChevronDown } from "lucide-react";
+import { Phone, MapPin, Star, ChevronDown, CalendarDays } from "lucide-react";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/hero-pizza-VfREaST9G2JTFrxvuYtYgW.webp";
 
@@ -87,20 +87,20 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="tel:023742736"
+              href="#reservation"
               className="group flex items-center gap-3 px-8 py-4 bg-gold text-background rounded-full text-base font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,110,0.4)]"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
-              <Phone className="w-5 h-5 group-hover:animate-pulse" />
-              Appeler maintenant
+              <CalendarDays className="w-5 h-5 group-hover:animate-pulse" />
+              Réserver une table
             </a>
             <a
-              href="#contact"
+              href="tel:023742736"
               className="flex items-center gap-3 px-8 py-4 border border-cream/20 text-cream rounded-full text-base font-medium hover:border-gold/50 hover:text-gold transition-all duration-300"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
-              <MapPin className="w-5 h-5" />
-              Nous trouver
+              <Phone className="w-5 h-5" />
+              Appeler
             </a>
           </motion.div>
 
