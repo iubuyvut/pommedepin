@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 import {
   CalendarDays,
   Clock,
@@ -161,8 +163,34 @@ export default function ReservationSection() {
     else if (step === "confirm") setStep("details");
   }
 
-  function handleSubmit() {
-    setSubmitted(true);
+  const createReservation = trpc.reservations.create.useMutation();
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function handleSubmit() {
+    setIsLoading(true);
+    try {
+      if (!form.date) throw new Error("Date not selected");
+      
+      const dateStr = `${form.date.getFullYear()}-${String(form.date.getMonth() + 1).padStart(2, '0')}-${String(form.date.getDate()).padStart(2, '0')}`;
+      
+      await createReservation.mutateAsync({
+        date: dateStr,
+        time: form.time,
+        guests: form.guests,
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        notes: form.notes || undefined,
+      });
+      
+      toast.success("Réservation confirmée ! Un e-mail de confirmation vous a été envoyé.");
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Reservation error:", error);
+      toast.error("Erreur lors de la réservation. Veuillez réessayer.");
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   function handleReset() {
