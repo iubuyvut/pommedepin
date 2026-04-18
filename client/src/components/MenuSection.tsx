@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ExternalLink } from "lucide-react";
 
-const PIZZA_WHITE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/pizza-white-Jb6X9bhNKffZrjWiCNfqGk.webp";
-const PIZZA_TROPICALE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/pizza-tropicale-4nWviPWujrndMizf4RqrPL.webp";
-const CHOCOLATE_MOUSSE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/chocolate-mousse-dW4TvCLtxi5y6CiNrrKaPR.webp";
+const PIZZA_WHITE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/a1623feSS4YD_9c738d4f.jpg";
+const PIZZA_TROPICALE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/4dj5ElxwSRKq_75940e51.jpg";
+const CHOCOLATE_MOUSSE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/h3yMwDqqdyDi_a46db364.jpg";
 
 const dishes = [
   {
@@ -64,7 +64,7 @@ export default function MenuSection() {
             Menu & <span className="text-gold italic">Plats Populaires</span>
           </h2>
           <p
-            className="text-foreground/50 text-lg max-w-2xl mx-auto"
+            className="text-foreground text-lg max-w-2xl mx-auto"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Découvrez nos pizzas artisanales, préparées avec passion et des ingrédients de première qualité.
@@ -79,7 +79,7 @@ export default function MenuSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 + i * 0.15 }}
-              className="group relative overflow-hidden rounded-2xl bg-card border border-border/30 hover:border-gold/30 transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl bg-card border border-[#e8e0d5]/40 hover:border-gold/30 transition-all duration-500"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -103,7 +103,7 @@ export default function MenuSection() {
                   {dish.name}
                 </h3>
                 <p
-                  className="text-foreground/50 text-sm"
+                  className="text-foreground text-sm"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {dish.description}
@@ -138,7 +138,7 @@ export default function MenuSection() {
                   {cat.items.map((item) => (
                     <li
                       key={item}
-                      className="text-foreground/60 text-sm flex items-center gap-2 hover:text-foreground transition-colors"
+                      className="text-foreground text-sm flex items-center gap-2 hover:text-foreground transition-colors"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
                       <span className="w-1 h-1 rounded-full bg-gold/40" />

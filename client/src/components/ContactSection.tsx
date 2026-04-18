@@ -93,7 +93,7 @@ export default function ContactSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Map */}
-            <div className="rounded-2xl overflow-hidden border border-border/30 h-[300px] mb-8">
+            <div className="rounded-2xl overflow-hidden border border-[#e8e0d5]/40 h-[300px] mb-8">
               <MapView
                 onMapReady={(map) => {
                   const location = { lat: 50.8003, lng: 4.3467 };
@@ -122,7 +122,7 @@ export default function ContactSection() {
                       href={item.href}
                       target={item.href.startsWith("http") ? "_blank" : undefined}
                       rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="block p-4 rounded-xl bg-card/50 border border-border/20 hover:border-gold/30 transition-all duration-300 group h-full"
+                      className="block p-4 rounded-xl bg-[#e8e0d5]/20 border border-border/20 hover:border-gold/30 transition-all duration-300 group h-full"
                     >
                       <item.icon className="w-5 h-5 text-gold mb-2 group-hover:scale-110 transition-transform" />
                       <p
@@ -139,7 +139,7 @@ export default function ContactSection() {
                       </p>
                     </a>
                   ) : (
-                    <div className="block p-4 rounded-xl bg-card/50 border border-border/20 h-full">
+                    <div className="block p-4 rounded-xl bg-[#e8e0d5]/20 border border-border/20 h-full">
                       <item.icon className="w-5 h-5 text-gold mb-2" />
                       <p
                         className="text-foreground/40 text-xs uppercase tracking-wider mb-1"
@@ -164,7 +164,7 @@ export default function ContactSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-6 p-6 rounded-xl bg-card/50 border border-border/20"
+              className="mt-6 p-6 rounded-xl bg-[#e8e0d5]/20 border border-border/20"
             >
               <h4
                 className="text-lg font-bold text-gold mb-4 flex items-center gap-2"
@@ -205,7 +205,7 @@ export default function ContactSection() {
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="p-8 rounded-2xl bg-card/50 border border-border/20">
+            <div className="p-8 rounded-2xl bg-[#e8e0d5]/20 border border-border/20">
               <h3
                 className="text-3xl font-bold text-foreground mb-2"
                 style={{ fontFamily: "'Cormorant', serif" }}
@@ -231,7 +231,7 @@ export default function ContactSection() {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#e8e0d5]/30 border border-[#e8e0d5]/40 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                     placeholder="Votre nom"
                     required
@@ -248,7 +248,7 @@ export default function ContactSection() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#e8e0d5]/30 border border-[#e8e0d5]/40 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                     placeholder="Votre numéro"
                     required
@@ -265,7 +265,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-[#e8e0d5]/30 border border-[#e8e0d5]/40 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors resize-none"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                     placeholder="Votre message..."
                     required

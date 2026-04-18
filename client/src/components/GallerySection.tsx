@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const HERO_PIZZA = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/hero-pizza-VfREaST9G2JTFrxvuYtYgW.webp";
-const RESTAURANT = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/restaurant-ambiance-YDHxzgCYSE3u4zVnbYpryW.webp";
-const PIZZA_WHITE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/pizza-white-Jb6X9bhNKffZrjWiCNfqGk.webp";
-const PIZZA_TROPICALE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/pizza-tropicale-4nWviPWujrndMizf4RqrPL.webp";
-const CHOCOLATE_MOUSSE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/chocolate-mousse-dW4TvCLtxi5y6CiNrrKaPR.webp";
+const HERO_PIZZA = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/4dj5ElxwSRKq_75940e51.jpg";
+const RESTAURANT = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/V6y3OPad3ouj_ef7964c0.jpg";
+const PIZZA_WHITE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/a1623feSS4YD_9c738d4f.jpg";
+const PIZZA_TROPICALE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/h3yMwDqqdyDi_a46db364.jpg";
+const CHOCOLATE_MOUSSE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/YrmeaP3QPEGS_eef8316d.jpg";
 
 const photos = [
   { src: HERO_PIZZA, alt: "Pizza Margherita artisanale", span: "md:col-span-2 md:row-span-2" },

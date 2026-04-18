@@ -243,7 +243,7 @@ export default function ReservationSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-3xl mx-auto rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm overflow-hidden"
+          className="max-w-3xl mx-auto rounded-2xl bg-card/60 border border-[#e8e0d5]/40 backdrop-blur-sm overflow-hidden"
         >
           {/* Progress Bar */}
           {!submitted && (
@@ -355,7 +355,7 @@ export default function ReservationSection() {
                       <div className="flex items-center gap-2">
                         <button
                           onClick={prevMonth}
-                          className="w-8 h-8 rounded-lg bg-card border border-border/30 flex items-center justify-center text-foreground/60 hover:text-gold hover:border-gold/30 transition-all"
+                          className="w-8 h-8 rounded-lg bg-card border border-[#e8e0d5]/40 flex items-center justify-center text-foreground/60 hover:text-gold hover:border-gold/30 transition-all"
                         >
                           <ChevronLeft className="w-4 h-4" />
                         </button>
@@ -367,7 +367,7 @@ export default function ReservationSection() {
                         </span>
                         <button
                           onClick={nextMonth}
-                          className="w-8 h-8 rounded-lg bg-card border border-border/30 flex items-center justify-center text-foreground/60 hover:text-gold hover:border-gold/30 transition-all"
+                          className="w-8 h-8 rounded-lg bg-card border border-[#e8e0d5]/40 flex items-center justify-center text-foreground/60 hover:text-gold hover:border-gold/30 transition-all"
                         >
                           <ChevronRight className="w-4 h-4" />
                         </button>
@@ -416,7 +416,7 @@ export default function ReservationSection() {
                                 ? "text-foreground/15 cursor-not-allowed"
                                 : todayMark
                                 ? "bg-gold/10 text-gold border border-gold/30 hover:bg-gold/20"
-                                : "text-foreground/70 hover:bg-card hover:text-foreground border border-transparent hover:border-border/30"
+                                : "text-foreground/70 hover:bg-card hover:text-foreground border border-transparent hover:border-[#e8e0d5]/40"
                             }`}
                             style={{ fontFamily: "'Outfit', sans-serif" }}
                           >
@@ -470,7 +470,7 @@ export default function ReservationSection() {
                             className={`py-2.5 rounded-lg text-sm font-medium transition-all ${
                               form.time === slot
                                 ? "bg-gold text-background shadow-[0_0_12px_rgba(201,169,110,0.3)]"
-                                : "bg-card/50 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
+                                : "bg-[#e8e0d5]/20 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
                             }`}
                             style={{ fontFamily: "'Outfit', sans-serif" }}
                           >
@@ -503,7 +503,7 @@ export default function ReservationSection() {
                           className={`w-12 h-12 rounded-lg text-sm font-semibold transition-all ${
                             form.guests === n
                               ? "bg-gold text-background shadow-[0_0_12px_rgba(201,169,110,0.3)]"
-                              : "bg-card/50 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
+                              : "bg-[#e8e0d5]/20 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
                           }`}
                           style={{ fontFamily: "'Outfit', sans-serif" }}
                         >
@@ -515,7 +515,7 @@ export default function ReservationSection() {
                         className={`px-4 h-12 rounded-lg text-sm font-semibold transition-all ${
                           form.guests >= 9
                             ? "bg-gold text-background shadow-[0_0_12px_rgba(201,169,110,0.3)]"
-                            : "bg-card/50 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
+                            : "bg-[#e8e0d5]/20 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
                         }`}
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                       >
@@ -581,7 +581,7 @@ export default function ReservationSection() {
                           setForm({ ...form, name: e.target.value });
                           setErrors({ ...errors, name: "" });
                         }}
-                        className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-[#e8e0d5]/30 border border-[#e8e0d5]/40 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                         placeholder="Jean Dupont"
                       />
@@ -600,7 +600,7 @@ export default function ReservationSection() {
                           setForm({ ...form, phone: e.target.value });
                           setErrors({ ...errors, phone: "" });
                         }}
-                        className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-[#e8e0d5]/30 border border-[#e8e0d5]/40 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                         placeholder="0470 12 34 56"
                       />
@@ -619,7 +619,7 @@ export default function ReservationSection() {
                           setForm({ ...form, email: e.target.value });
                           setErrors({ ...errors, email: "" });
                         }}
-                        className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-[#e8e0d5]/30 border border-[#e8e0d5]/40 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                         placeholder="jean@exemple.be"
                       />
@@ -635,7 +635,7 @@ export default function ReservationSection() {
                         value={form.notes}
                         onChange={(e) => setForm({ ...form, notes: e.target.value })}
                         rows={3}
-                        className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors resize-none"
+                        className="w-full px-4 py-3 rounded-xl bg-[#e8e0d5]/30 border border-[#e8e0d5]/40 text-foreground placeholder:text-foreground/20 focus:border-gold/50 focus:outline-none transition-colors resize-none"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                         placeholder="Allergies, anniversaire, chaise haute..."
                       />
@@ -646,7 +646,7 @@ export default function ReservationSection() {
                   <div className="flex gap-3 mt-8">
                     <button
                       onClick={handleBack}
-                      className="flex-1 py-4 border border-border/30 text-foreground/60 rounded-xl text-base font-medium hover:border-gold/30 hover:text-foreground transition-all"
+                      className="flex-1 py-4 border border-[#e8e0d5]/40 text-foreground/60 rounded-xl text-base font-medium hover:border-gold/30 hover:text-foreground transition-all"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
                       Retour
@@ -708,7 +708,7 @@ export default function ReservationSection() {
                   <div className="flex gap-3">
                     <button
                       onClick={handleBack}
-                      className="flex-1 py-4 border border-border/30 text-foreground/60 rounded-xl text-base font-medium hover:border-gold/30 hover:text-foreground transition-all"
+                      className="flex-1 py-4 border border-[#e8e0d5]/40 text-foreground/60 rounded-xl text-base font-medium hover:border-gold/30 hover:text-foreground transition-all"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
                       Modifier

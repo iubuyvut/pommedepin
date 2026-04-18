@@ -99,7 +99,7 @@ export default function HeroSection() {
             {["Repas sur place", "Vente à emporter", "20–30 € / pers."].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-foreground text-sm"
+                className="px-4 py-2 rounded-full bg-[#e8e0d5]/10 border border-[#e8e0d5]/30 text-foreground text-sm"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 {item}

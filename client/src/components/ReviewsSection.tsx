@@ -92,7 +92,7 @@ export default function ReviewsSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col md:flex-row items-center justify-center gap-10 mb-16 p-8 rounded-2xl bg-card/50 border border-border/20 max-w-3xl mx-auto"
+          className="flex flex-col md:flex-row items-center justify-center gap-10 mb-16 p-8 rounded-2xl bg-[#e8e0d5]/20 border border-border/20 max-w-3xl mx-auto"
         >
           {/* Big Rating */}
           <div className="text-center">
@@ -221,7 +221,7 @@ export default function ReviewsSection() {
           ].map((tag) => (
             <span
               key={tag.label}
-              className="px-4 py-2 rounded-full bg-card/50 border border-border/20 text-foreground/50 text-sm hover:border-gold/30 hover:text-gold transition-all duration-300"
+              className="px-4 py-2 rounded-full bg-[#e8e0d5]/20 border border-border/20 text-foreground/50 text-sm hover:border-gold/30 hover:text-gold transition-all duration-300"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
               {tag.label} <span className="text-foreground/30">{tag.count}</span>
