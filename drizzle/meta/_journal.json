@@ -15,20 +15,6 @@
       "when": 1776448084469,
       "tag": "0001_bored_typhoid_mary",
       "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1776541253915,
-      "tag": "0002_tiny_gertrude_yorkes",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "5",
-      "when": 1776542383339,
-      "tag": "0003_cuddly_moondragon",
-      "breakpoints": true
     }
   ]
 }

@@ -22,32 +22,31 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-cream/95 backdrop-blur-sm border-b border-border"
-          : "bg-cream/80 backdrop-blur-sm border-b border-border"
+          ? "bg-background/90 backdrop-blur-md border-b border-border/30 py-3"
+          : "bg-transparent py-5"
       }`}
     >
-      <div className="container flex items-center justify-between px-8 py-4">
+      <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2 group">
-          <span className="w-1.5 h-1.5 bg-terracotta rounded-full"></span>
+        <a href="#hero" className="flex items-center gap-3 group">
           <span
-            className="text-2xl md:text-3xl font-light tracking-tight text-ink italic"
-            style={{ fontFamily: "'DM Serif Display', serif" }}
+            className="text-2xl md:text-3xl font-bold tracking-tight text-gold"
+            style={{ fontFamily: "'Cormorant', serif" }}
           >
             Il Divido
           </span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-9">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-xs font-medium text-ink hover:text-terracotta transition-colors duration-300"
-              style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.08em", textTransform: "uppercase" }}
+              className="text-sm font-medium text-cream/70 hover:text-gold transition-colors duration-300 tracking-wide uppercase"
+              style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "0.1em" }}
             >
               {link.label}
             </a>
@@ -58,15 +57,16 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="#reservation"
-            className="hidden sm:block px-6 py-3 bg-olive-deep text-cream text-xs font-medium transition-all duration-300 hover:bg-terracotta-deep"
-            style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.18em", textTransform: "uppercase" }}
+            className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-gold text-background rounded-full text-sm font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,169,110,0.3)]"
+            style={{ fontFamily: "'Outfit', sans-serif" }}
           >
+            <CalendarDays className="w-4 h-4" />
             Réserver
           </a>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-ink hover:text-terracotta transition-colors"
+            className="lg:hidden text-cream/80 hover:text-gold transition-colors"
             aria-label="Menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
