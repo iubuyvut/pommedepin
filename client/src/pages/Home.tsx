@@ -15,7 +15,6 @@ import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
-import GradientDivider from "@/components/GradientDivider";
 import { useAuth } from "@/_core/hooks/useAuth";
 
 export default function Home() {
@@ -27,21 +26,13 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <GradientDivider height={30} />
       <AboutSection />
-      <GradientDivider height={30} />
       <MenuSection />
-      <GradientDivider height={30} />
       <ReservationSection />
-      <GradientDivider height={30} />
       <WhyUsSection />
-      <GradientDivider height={30} />
       <GallerySection />
-      <GradientDivider height={30} />
       <ReviewsSection />
-      <GradientDivider height={30} />
       <ContactSection />
-      <GradientDivider height={30} />
       <Footer />
       <FloatingCTA />
     </div>

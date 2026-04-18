@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useScrollReveal, useCountUp } from "@/hooks/useScrollReveal";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const RESTAURANT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663366896650/PM6jjmsoS5EWWWLtQBTqh8/restaurant-ambiance-YDHxzgCYSE3u4zVnbYpryW.webp";
 
@@ -11,23 +10,16 @@ const stats = [
 ];
 
 function StatItem({ value, suffix, label, isDecimal }: { value: number; suffix: string; label: string; isDecimal?: boolean }) {
-  const { ref: countRef, count } = useCountUp(value, 2000);
-  const { ref: animRef, isVisible } = useScrollAnimation({ threshold: 0.3 });
+  const { ref, count } = useCountUp(value, 2000);
   return (
-    <motion.div
-      ref={animRef}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
-      className="text-center"
-    >
-      <div ref={countRef} className="text-4xl md:text-5xl font-bold text-accent" style={{ fontFamily: "'Cormorant', serif" }}>
+    <div ref={ref} className="text-center">
+      <div className="text-4xl md:text-5xl font-bold text-accent" style={{ fontFamily: "'Cormorant', serif" }}>
         {isDecimal ? `${count}${suffix}` : `${count}${suffix}`}
       </div>
       <div className="text-sm text-foreground/50 mt-2 uppercase tracking-wider" style={{ fontFamily: "'Outfit', sans-serif" }}>
         {label}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
