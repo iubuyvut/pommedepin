@@ -1,22 +1,23 @@
 /**
- * GradientDivider - Seamless transition between sections
- * Creates imperceptible gradients so sections blend perfectly
+ * GradientDivider - Smooth transition between sections
+ * Creates a subtle gradient to blend sections seamlessly
  */
 
 interface GradientDividerProps {
+  fromColor?: string;
+  toColor?: string;
   height?: number;
 }
 
 export default function GradientDivider({
-  height = 60,
+  fromColor = "from-background",
+  toColor = "to-background",
+  height = 40,
 }: GradientDividerProps) {
   return (
     <div
-      className="w-full"
-      style={{
-        height: `${height}px`,
-        background: 'linear-gradient(to bottom, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.04) 50%, rgba(0,0,0,0.02) 100%)',
-      }}
+      className={`w-full bg-gradient-to-b ${fromColor} ${toColor}`}
+      style={{ height: `${height}px` }}
     />
   );
 }

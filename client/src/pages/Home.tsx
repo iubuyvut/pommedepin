@@ -27,21 +27,21 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <GradientDivider height={60} />
+      <GradientDivider height={30} />
       <AboutSection />
-      <GradientDivider height={60} />
+      <GradientDivider height={30} />
       <MenuSection />
-      <GradientDivider height={60} />
+      <GradientDivider height={30} />
       <ReservationSection />
-      <GradientDivider height={60} />
+      <GradientDivider height={30} />
       <WhyUsSection />
-      <GradientDivider height={60} />
+      <GradientDivider height={30} />
       <GallerySection />
-      <GradientDivider height={60} />
+      <GradientDivider height={30} />
       <ReviewsSection />
-      <GradientDivider height={60} />
+      <GradientDivider height={30} />
       <ContactSection />
-      <GradientDivider height={60} />
+      <GradientDivider height={30} />
       <Footer />
       <FloatingCTA />
     </div>
