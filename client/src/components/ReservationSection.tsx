@@ -231,7 +231,7 @@ export default function ReservationSection() {
             Réservez votre <span className="text-gold italic">table</span>
           </h2>
           <p
-            className="text-foreground/50 text-lg max-w-2xl mx-auto"
+            className="text-foreground text-lg max-w-2xl mx-auto"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Choisissez votre date, votre créneau et le nombre de convives. Nous vous attendons avec plaisir.
@@ -264,7 +264,7 @@ export default function ReservationSection() {
                         ? "text-gold border-b-2 border-gold bg-gold/5"
                         : isDone
                         ? "text-gold/60"
-                        : "text-foreground/30"
+                        : "text-foreground"
                     }`}
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
@@ -298,7 +298,7 @@ export default function ReservationSection() {
                     Réservation confirmée !
                   </h3>
                   <p
-                    className="text-foreground/50 text-base mb-2 max-w-md mx-auto"
+                    className="text-foreground text-base mb-2 max-w-md mx-auto"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     Merci <span className="text-foreground font-medium">{form.name}</span>. Votre table pour{" "}
@@ -318,7 +318,7 @@ export default function ReservationSection() {
                     à {form.time}
                   </p>
                   <p
-                    className="text-foreground/40 text-sm mb-6"
+                    className="text-foreground text-sm mb-6"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     Un SMS de confirmation vous sera envoyé au {form.phone}.
@@ -355,7 +355,7 @@ export default function ReservationSection() {
                       <div className="flex items-center gap-2">
                         <button
                           onClick={prevMonth}
-                          className="w-8 h-8 rounded-lg bg-card border border-[#e8e0d5]/40 flex items-center justify-center text-foreground/60 hover:text-gold hover:border-gold/30 transition-all"
+                          className="w-8 h-8 rounded-lg bg-card border border-[#e8e0d5]/40 flex items-center justify-center text-foreground hover:text-gold hover:border-gold/30 transition-all"
                         >
                           <ChevronLeft className="w-4 h-4" />
                         </button>
@@ -367,7 +367,7 @@ export default function ReservationSection() {
                         </span>
                         <button
                           onClick={nextMonth}
-                          className="w-8 h-8 rounded-lg bg-card border border-[#e8e0d5]/40 flex items-center justify-center text-foreground/60 hover:text-gold hover:border-gold/30 transition-all"
+                          className="w-8 h-8 rounded-lg bg-card border border-[#e8e0d5]/40 flex items-center justify-center text-foreground hover:text-gold hover:border-gold/30 transition-all"
                         >
                           <ChevronRight className="w-4 h-4" />
                         </button>
@@ -379,7 +379,7 @@ export default function ReservationSection() {
                       {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map((d) => (
                         <div
                           key={d}
-                          className="text-center text-xs text-foreground/30 py-2 font-medium"
+                          className="text-center text-xs text-foreground py-2 font-medium"
                           style={{ fontFamily: "'Outfit', sans-serif" }}
                         >
                           {d}
@@ -416,7 +416,7 @@ export default function ReservationSection() {
                                 ? "text-foreground/15 cursor-not-allowed"
                                 : todayMark
                                 ? "bg-gold/10 text-gold border border-gold/30 hover:bg-gold/20"
-                                : "text-foreground/70 hover:bg-card hover:text-foreground border border-transparent hover:border-[#e8e0d5]/40"
+                                : "text-foreground hover:bg-card hover:text-foreground border border-transparent hover:border-[#e8e0d5]/40"
                             }`}
                             style={{ fontFamily: "'Outfit', sans-serif" }}
                           >
@@ -429,7 +429,7 @@ export default function ReservationSection() {
                       })}
                     </div>
 
-                    <div className="flex items-center gap-4 mt-3 text-xs text-foreground/30" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                    <div className="flex items-center gap-4 mt-3 text-xs text-foreground" style={{ fontFamily: "'Outfit', sans-serif" }}>
                       <span className="flex items-center gap-1">
                         <span className="w-2 h-2 rounded-full bg-red-400/60" /> Fermé (lundi)
                       </span>
@@ -470,7 +470,7 @@ export default function ReservationSection() {
                             className={`py-2.5 rounded-lg text-sm font-medium transition-all ${
                               form.time === slot
                                 ? "bg-gold text-background shadow-[0_0_12px_rgba(201,169,110,0.3)]"
-                                : "bg-[#e8e0d5]/20 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
+                                : "bg-[#e8e0d5]/20 border border-border/20 text-foreground hover:border-gold/30 hover:text-foreground"
                             }`}
                             style={{ fontFamily: "'Outfit', sans-serif" }}
                           >
@@ -503,7 +503,7 @@ export default function ReservationSection() {
                           className={`w-12 h-12 rounded-lg text-sm font-semibold transition-all ${
                             form.guests === n
                               ? "bg-gold text-background shadow-[0_0_12px_rgba(201,169,110,0.3)]"
-                              : "bg-[#e8e0d5]/20 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
+                              : "bg-[#e8e0d5]/20 border border-border/20 text-foreground hover:border-gold/30 hover:text-foreground"
                           }`}
                           style={{ fontFamily: "'Outfit', sans-serif" }}
                         >
@@ -515,7 +515,7 @@ export default function ReservationSection() {
                         className={`px-4 h-12 rounded-lg text-sm font-semibold transition-all ${
                           form.guests >= 9
                             ? "bg-gold text-background shadow-[0_0_12px_rgba(201,169,110,0.3)]"
-                            : "bg-[#e8e0d5]/20 border border-border/20 text-foreground/60 hover:border-gold/30 hover:text-foreground"
+                            : "bg-[#e8e0d5]/20 border border-border/20 text-foreground hover:border-gold/30 hover:text-foreground"
                         }`}
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                       >
@@ -562,7 +562,7 @@ export default function ReservationSection() {
                     </span>
                     <button
                       onClick={handleBack}
-                      className="ml-auto text-foreground/40 hover:text-gold transition-colors"
+                      className="ml-auto text-foreground hover:text-gold transition-colors"
                     >
                       <X className="w-4 h-4" />
                     </button>
@@ -571,7 +571,7 @@ export default function ReservationSection() {
                   <div className="space-y-5">
                     {/* Name */}
                     <div>
-                      <label className="text-foreground/60 text-sm mb-2 flex items-center gap-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                      <label className="text-foreground text-sm mb-2 flex items-center gap-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
                         <User className="w-4 h-4 text-gold/60" /> Nom complet *
                       </label>
                       <input
@@ -590,7 +590,7 @@ export default function ReservationSection() {
 
                     {/* Phone */}
                     <div>
-                      <label className="text-foreground/60 text-sm mb-2 flex items-center gap-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                      <label className="text-foreground text-sm mb-2 flex items-center gap-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
                         <Phone className="w-4 h-4 text-gold/60" /> Téléphone *
                       </label>
                       <input
@@ -609,7 +609,7 @@ export default function ReservationSection() {
 
                     {/* Email */}
                     <div>
-                      <label className="text-foreground/60 text-sm mb-2 flex items-center gap-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                      <label className="text-foreground text-sm mb-2 flex items-center gap-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
                         <Mail className="w-4 h-4 text-gold/60" /> Email (optionnel)
                       </label>
                       <input
@@ -628,7 +628,7 @@ export default function ReservationSection() {
 
                     {/* Notes */}
                     <div>
-                      <label className="text-foreground/60 text-sm mb-2 flex items-center gap-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                      <label className="text-foreground text-sm mb-2 flex items-center gap-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
                         <MessageSquare className="w-4 h-4 text-gold/60" /> Remarques (optionnel)
                       </label>
                       <textarea
@@ -646,7 +646,7 @@ export default function ReservationSection() {
                   <div className="flex gap-3 mt-8">
                     <button
                       onClick={handleBack}
-                      className="flex-1 py-4 border border-[#e8e0d5]/40 text-foreground/60 rounded-xl text-base font-medium hover:border-gold/30 hover:text-foreground transition-all"
+                      className="flex-1 py-4 border border-[#e8e0d5]/40 text-foreground rounded-xl text-base font-medium hover:border-gold/30 hover:text-foreground transition-all"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
                       Retour
@@ -694,7 +694,7 @@ export default function ReservationSection() {
                       >
                         <item.icon className="w-5 h-5 text-gold mt-0.5 shrink-0" />
                         <div>
-                          <p className="text-foreground/40 text-xs uppercase tracking-wider mb-0.5" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                          <p className="text-foreground text-xs uppercase tracking-wider mb-0.5" style={{ fontFamily: "'Outfit', sans-serif" }}>
                             {item.label}
                           </p>
                           <p className="text-foreground text-sm font-medium" style={{ fontFamily: "'Outfit', sans-serif" }}>
@@ -708,7 +708,7 @@ export default function ReservationSection() {
                   <div className="flex gap-3">
                     <button
                       onClick={handleBack}
-                      className="flex-1 py-4 border border-[#e8e0d5]/40 text-foreground/60 rounded-xl text-base font-medium hover:border-gold/30 hover:text-foreground transition-all"
+                      className="flex-1 py-4 border border-[#e8e0d5]/40 text-foreground rounded-xl text-base font-medium hover:border-gold/30 hover:text-foreground transition-all"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
                       Modifier
@@ -732,7 +732,7 @@ export default function ReservationSection() {
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center text-foreground/30 text-sm mt-8 max-w-lg mx-auto"
+          className="text-center text-foreground text-sm mt-8 max-w-lg mx-auto"
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >
           Pour les groupes de plus de 10 personnes, veuillez nous contacter directement au{" "}

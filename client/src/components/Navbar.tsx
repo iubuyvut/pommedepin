@@ -24,7 +24,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-[#e8e0d5]/40 py-3"
+          ? "bg-[#e8e0d5]/60 backdrop-blur-md border-b border-[#e8e0d5]/40 py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -66,7 +66,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-foreground/80 hover:text-gold transition-colors"
+            className="lg:hidden text-foreground hover:text-gold transition-colors"
             aria-label="Menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -76,7 +76,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-[#e8e0d5]/40 transition-all duration-300 ${
+        className={`lg:hidden absolute top-full left-0 right-0 bg-[#e8e0d5]/70 backdrop-blur-md border-b border-[#e8e0d5]/40 transition-all duration-300 ${
           mobileOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
@@ -86,7 +86,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-base text-foreground/80 hover:text-gold transition-colors py-2 uppercase tracking-wider"
+              className="text-base text-foreground hover:text-gold transition-colors py-2 uppercase tracking-wider"
               style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "0.08em" }}
             >
               {link.label}

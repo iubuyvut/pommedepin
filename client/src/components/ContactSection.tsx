@@ -78,7 +78,7 @@ export default function ContactSection() {
             Venez nous <span className="text-gold italic">rendre visite</span>
           </h2>
           <p
-            className="text-foreground/50 text-lg max-w-2xl mx-auto"
+            className="text-foreground text-lg max-w-2xl mx-auto"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Nous sommes situés au coeur d'Uccle, dans un cadre chaleureux qui vous attend chaque soir.
@@ -126,7 +126,7 @@ export default function ContactSection() {
                     >
                       <item.icon className="w-5 h-5 text-gold mb-2 group-hover:scale-110 transition-transform" />
                       <p
-                        className="text-foreground/40 text-xs uppercase tracking-wider mb-1"
+                        className="text-foreground text-xs uppercase tracking-wider mb-1"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                       >
                         {item.label}
@@ -142,7 +142,7 @@ export default function ContactSection() {
                     <div className="block p-4 rounded-xl bg-[#e8e0d5]/20 border border-border/20 h-full">
                       <item.icon className="w-5 h-5 text-gold mb-2" />
                       <p
-                        className="text-foreground/40 text-xs uppercase tracking-wider mb-1"
+                        className="text-foreground text-xs uppercase tracking-wider mb-1"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                       >
                         {item.label}
@@ -180,14 +180,14 @@ export default function ContactSection() {
                     className="flex justify-between items-center py-1.5 border-b border-border/10 last:border-0"
                   >
                     <span
-                      className="text-foreground/60 text-sm"
+                      className="text-foreground text-sm"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
                       {h.day}
                     </span>
                     <span
                       className={`text-sm font-medium ${
-                        h.time === "Fermé" ? "text-foreground/30" : "text-foreground"
+                        h.time === "Fermé" ? "text-foreground" : "text-foreground"
                       }`}
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
@@ -213,7 +213,7 @@ export default function ContactSection() {
                 Contactez-nous
               </h3>
               <p
-                className="text-foreground/50 text-sm mb-8"
+                className="text-foreground text-sm mb-8"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 Envoyez-nous un message et nous vous répondrons rapidement.
@@ -222,7 +222,7 @@ export default function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label
-                    className="text-foreground/60 text-sm mb-2 block"
+                    className="text-foreground text-sm mb-2 block"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     Nom
@@ -239,7 +239,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label
-                    className="text-foreground/60 text-sm mb-2 block"
+                    className="text-foreground text-sm mb-2 block"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     Téléphone
@@ -256,7 +256,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label
-                    className="text-foreground/60 text-sm mb-2 block"
+                    className="text-foreground text-sm mb-2 block"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     Message
@@ -284,7 +284,7 @@ export default function ContactSection() {
               {/* Quick Actions */}
               <div className="mt-8 pt-6 border-t border-border/20">
                 <p
-                  className="text-foreground/40 text-sm mb-4"
+                  className="text-foreground text-sm mb-4"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   Ou contactez-nous directement :

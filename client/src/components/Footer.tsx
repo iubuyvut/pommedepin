@@ -17,7 +17,7 @@ export default function Footer() {
               Le Il Divido
             </h3>
             <p
-              className="text-foreground/40 text-sm leading-relaxed max-w-xs"
+              className="text-foreground text-sm leading-relaxed max-w-xs"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
               Pizzeria artisanale à Uccle depuis plus de 20 ans. L'art de la pizza dans un cadre chaleureux et authentique.
@@ -44,7 +44,7 @@ export default function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-foreground/40 text-sm hover:text-gold transition-colors"
+                  className="block text-foreground text-sm hover:text-gold transition-colors"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {link.label}
@@ -63,7 +63,7 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               <div
-                className="flex items-center gap-2 text-foreground/40 text-sm"
+                className="flex items-center gap-2 text-foreground text-sm"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 <Phone className="w-4 h-4" />
@@ -73,14 +73,14 @@ export default function Footer() {
                 href="https://maps.google.com/?q=Il+Divido+Uccle"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-foreground/40 text-sm hover:text-gold transition-colors"
+                className="flex items-center gap-2 text-foreground text-sm hover:text-gold transition-colors"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 <MapPin className="w-4 h-4" />
                 Chp du Vert Chasseur 87, 1180 Uccle
               </a>
               <div
-                className="flex items-center gap-2 text-foreground/40 text-sm"
+                className="flex items-center gap-2 text-foreground text-sm"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 <Globe className="w-4 h-4" />

@@ -61,7 +61,7 @@ export default function WhyUsSection() {
             Une adresse <span className="text-gold italic">à garder</span>
           </h2>
           <p
-            className="text-foreground/50 text-lg"
+            className="text-foreground text-lg"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Ce qui fait de La Pomme de Pin une expérience unique à Uccle.
@@ -90,7 +90,7 @@ export default function WhyUsSection() {
                 {feature.title}
               </h3>
               <p
-                className="text-foreground/50 leading-relaxed"
+                className="text-foreground leading-relaxed"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 {feature.description}
@@ -117,7 +117,7 @@ export default function WhyUsSection() {
             Réservez votre table
           </button>
           <p
-            className="text-foreground/30 text-sm mt-4"
+            className="text-foreground text-sm mt-4"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Ouvert tous les soirs à partir de 19h00
