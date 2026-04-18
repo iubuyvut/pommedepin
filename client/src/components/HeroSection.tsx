@@ -94,14 +94,14 @@ export default function HeroSection() {
               <CalendarDays className="w-5 h-5 group-hover:animate-pulse" />
               Réserver une table
             </a>
-            <a
-              href="tel:023742736"
+            <button
               className="flex items-center gap-3 px-8 py-4 border border-cream/20 text-cream rounded-full text-base font-medium hover:border-gold/50 hover:text-gold transition-all duration-300"
               style={{ fontFamily: "'Outfit', sans-serif" }}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Phone className="w-5 h-5" />
-              Appeler
-            </a>
+              Nous contacter
+            </button>
           </motion.div>
 
           {/* Info Pills */}

@@ -109,13 +109,13 @@ export default function WhyUsSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16"
         >
-          <a
-            href="tel:023742736"
+          <button
             className="inline-flex items-center gap-3 px-10 py-4 bg-gold text-background rounded-full text-base font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,110,0.3)]"
             style={{ fontFamily: "'Outfit', sans-serif" }}
+            onClick={() => document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Réservez votre table
-          </a>
+          </button>
           <p
             className="text-cream/30 text-sm mt-4"
             style={{ fontFamily: "'Outfit', sans-serif" }}

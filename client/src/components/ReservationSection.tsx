@@ -736,7 +736,7 @@ export default function ReservationSection() {
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >
           Pour les groupes de plus de 10 personnes, veuillez nous contacter directement au{" "}
-          <a href="tel:023742736" className="text-gold hover:underline">02 374 27 36</a>.
+          <span className="text-gold">02 374 27 36</span>.
         </motion.p>
       </div>
     </section>

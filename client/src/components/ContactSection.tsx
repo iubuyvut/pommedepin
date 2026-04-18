@@ -9,19 +9,19 @@ const contactInfo = [
     icon: MapPin,
     label: "Adresse",
     value: "Chp du Vert Chasseur 87, 1180 Uccle",
-    href: "https://maps.google.com/?q=La+Pomme+de+Pin+Uccle",
+    href: "https://maps.google.com/?q=Il+Divido+Uccle",
   },
   {
     icon: Phone,
     label: "Téléphone",
     value: "02 374 27 36",
-    href: "tel:023742736",
+    href: null,
   },
   {
     icon: Globe,
     label: "Site web",
-    value: "pommedepin.be",
-    href: "https://pommedepin.be",
+    value: "Il Divido",
+    href: null,
   },
   {
     icon: Clock,

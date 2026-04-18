@@ -48,7 +48,7 @@ export default function AboutSection() {
               animate={isVisible ? { opacity: 1 } : {}}
               transition={{ duration: 1.2, delay: 0.2 }}
             >
-              La Pomme de Pin est une pizzeria artisanale
+              Le Il Divido est une pizzeria artisanale
             </motion.span>{" "}
             <motion.span
               initial={{ opacity: 0.15 }}
@@ -122,7 +122,7 @@ export default function AboutSection() {
               className="text-cream/60 text-lg leading-relaxed mb-8"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
-              Depuis plus de 20 ans, La Pomme de Pin perpétue l'art de la pizza artisanale à Uccle.
+              Depuis plus de 20 ans, Le Il Divido perpétue l'art de la pizza artisanale à Uccle.
               Chaque pizza est préparée avec des ingrédients soigneusement sélectionnés et cuite
               dans notre four traditionnel, pour un résultat qui ravit les papilles de nos fidèles clients.
               Nos patrons, toujours adorables, contribuent au plaisir de chaque visite.

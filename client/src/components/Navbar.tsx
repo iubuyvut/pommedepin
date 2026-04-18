@@ -35,7 +35,7 @@ export default function Navbar() {
             className="text-2xl md:text-3xl font-bold tracking-tight text-gold"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
-            La Pomme de Pin
+            Il Divido
           </span>
         </a>
 

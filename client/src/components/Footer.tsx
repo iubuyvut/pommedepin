@@ -14,7 +14,7 @@ export default function Footer() {
               className="text-3xl font-bold text-gold mb-4"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
-              La Pomme de Pin
+              Le Il Divido
             </h3>
             <p
               className="text-cream/40 text-sm leading-relaxed max-w-xs"
@@ -62,16 +62,15 @@ export default function Footer() {
               Contact
             </h4>
             <div className="space-y-3">
-              <a
-                href="tel:023742736"
-                className="flex items-center gap-2 text-cream/40 text-sm hover:text-gold transition-colors"
+              <div
+                className="flex items-center gap-2 text-cream/40 text-sm"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 <Phone className="w-4 h-4" />
                 02 374 27 36
-              </a>
+              </div>
               <a
-                href="https://maps.google.com/?q=La+Pomme+de+Pin+Uccle"
+                href="https://maps.google.com/?q=Il+Divido+Uccle"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-cream/40 text-sm hover:text-gold transition-colors"
@@ -80,16 +79,13 @@ export default function Footer() {
                 <MapPin className="w-4 h-4" />
                 Chp du Vert Chasseur 87, 1180 Uccle
               </a>
-              <a
-                href="https://pommedepin.be"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-cream/40 text-sm hover:text-gold transition-colors"
+              <div
+                className="flex items-center gap-2 text-cream/40 text-sm"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 <Globe className="w-4 h-4" />
-                pommedepin.be
-              </a>
+                Il Divido
+              </div>
             </div>
           </div>
         </div>
@@ -100,7 +96,7 @@ export default function Footer() {
             className="text-cream/20 text-xs"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
-            &copy; {new Date().getFullYear()} La Pomme de Pin. Tous droits réservés.
+            &copy; {new Date().getFullYear()} Le Il Divido. Tous droits réservés.
           </p>
           <p
             className="text-cream/20 text-xs"
