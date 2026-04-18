@@ -76,7 +76,7 @@ export default function WhyUsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 + i * 0.15 }}
-              className="group relative p-8 rounded-2xl bg-[#e8e0d5]/20 border border-border/20 hover:border-gold/30 transition-all duration-500 hover:bg-card/80"
+              className="group relative p-8 rounded-2xl bg-[#f7e7ce]/20 border border-border/20 hover:border-gold/30 transition-all duration-500 hover:bg-card/80"
             >
               {/* Icon */}
               <div className="w-14 h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors duration-300">

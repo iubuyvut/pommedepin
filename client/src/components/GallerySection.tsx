@@ -61,7 +61,7 @@ export default function GallerySection() {
                 alt={photo.alt}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-background/0 group-hover:bg-[#e8e0d5]/30 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-background/0 group-hover:bg-[#f7e7ce]/30 transition-colors duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <p
                   className="text-foreground text-sm"

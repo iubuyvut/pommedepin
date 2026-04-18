@@ -79,7 +79,7 @@ export default function MenuSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 + i * 0.15 }}
-              className="group relative overflow-hidden rounded-2xl bg-card border border-[#e8e0d5]/40 hover:border-gold/30 transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl bg-card border border-[#f7e7ce]/40 hover:border-gold/30 transition-all duration-500"
             >
               <div className="relative h-64 overflow-hidden">
                 <img

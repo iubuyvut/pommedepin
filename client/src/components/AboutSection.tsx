@@ -129,7 +129,7 @@ export default function AboutSection() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-[#e8e0d5]/40">
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-[#f7e7ce]/40">
               {stats.map((stat) => (
                 <StatItem key={stat.label} {...stat} />
               ))}

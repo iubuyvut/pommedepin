@@ -306,7 +306,7 @@ export function AIChatBox({
       <form
         ref={inputAreaRef}
         onSubmit={handleSubmit}
-        className="flex gap-2 p-4 border-t bg-[#e8e0d5]/30 items-end"
+        className="flex gap-2 p-4 border-t bg-[#f7e7ce]/30 items-end"
       >
         <Textarea
           ref={textareaRef}
