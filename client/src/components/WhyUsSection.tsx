@@ -55,13 +55,13 @@ export default function WhyUsSection() {
             Pourquoi Nous Choisir
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
             Une adresse <span className="text-gold italic">à garder</span>
           </h2>
           <p
-            className="text-cream/50 text-lg"
+            className="text-foreground/50 text-lg"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Ce qui fait de La Pomme de Pin une expérience unique à Uccle.
@@ -84,13 +84,13 @@ export default function WhyUsSection() {
               </div>
 
               <h3
-                className="text-2xl font-bold text-cream mb-3"
+                className="text-2xl font-bold text-foreground mb-3"
                 style={{ fontFamily: "'Cormorant', serif" }}
               >
                 {feature.title}
               </h3>
               <p
-                className="text-cream/50 leading-relaxed"
+                className="text-foreground/50 leading-relaxed"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 {feature.description}
@@ -117,7 +117,7 @@ export default function WhyUsSection() {
             Réservez votre table
           </button>
           <p
-            className="text-cream/30 text-sm mt-4"
+            className="text-foreground/30 text-sm mt-4"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Ouvert tous les soirs à partir de 19h00

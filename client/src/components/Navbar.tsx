@@ -66,7 +66,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-cream/80 hover:text-gold transition-colors"
+            className="lg:hidden text-foreground/80 hover:text-gold transition-colors"
             aria-label="Menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -86,7 +86,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-base text-cream/80 hover:text-gold transition-colors py-2 uppercase tracking-wider"
+              className="text-base text-foreground/80 hover:text-gold transition-colors py-2 uppercase tracking-wider"
               style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "0.08em" }}
             >
               {link.label}

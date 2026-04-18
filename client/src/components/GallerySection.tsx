@@ -37,7 +37,7 @@ export default function GallerySection() {
             Galerie
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
             Photos & <span className="text-gold italic">Atmosphère</span>
@@ -64,7 +64,7 @@ export default function GallerySection() {
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/30 transition-colors duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <p
-                  className="text-cream text-sm"
+                  className="text-foreground text-sm"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {photo.alt}

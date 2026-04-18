@@ -80,7 +80,7 @@ export default function HeroSection() {
               Réserver une table
             </a>
             <button
-              className="flex items-center gap-3 px-8 py-4 border border-cream/20 text-cream rounded-full text-base font-medium hover:border-gold/50 hover:text-gold transition-all duration-300"
+              className="flex items-center gap-3 px-8 py-4 border border-foreground text-foreground rounded-full text-base font-medium hover:border-gold/50 hover:text-gold transition-all duration-300"
               style={{ fontFamily: "'Outfit', sans-serif" }}
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
@@ -99,7 +99,7 @@ export default function HeroSection() {
             {["Repas sur place", "Vente à emporter", "20–30 € / pers."].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-cream/50 text-sm"
+                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-foreground text-sm"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 {item}
@@ -116,7 +116,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 1.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-cream/30 text-xs uppercase tracking-[0.2em]" style={{ fontFamily: "'Outfit', sans-serif" }}>
+        <span className="text-foreground text-xs uppercase tracking-[0.2em]" style={{ fontFamily: "'Outfit', sans-serif" }}>
           Découvrir
         </span>
         <ChevronDown className="w-5 h-5 text-gold/50 animate-bounce" />

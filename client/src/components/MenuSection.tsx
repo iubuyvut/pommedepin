@@ -58,13 +58,13 @@ export default function MenuSection() {
             Nos Créations
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
             Menu & <span className="text-gold italic">Plats Populaires</span>
           </h2>
           <p
-            className="text-cream/50 text-lg max-w-2xl mx-auto"
+            className="text-foreground/50 text-lg max-w-2xl mx-auto"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Découvrez nos pizzas artisanales, préparées avec passion et des ingrédients de première qualité.
@@ -97,13 +97,13 @@ export default function MenuSection() {
               </div>
               <div className="p-6">
                 <h3
-                  className="text-2xl font-bold text-cream mb-2"
+                  className="text-2xl font-bold text-foreground mb-2"
                   style={{ fontFamily: "'Cormorant', serif" }}
                 >
                   {dish.name}
                 </h3>
                 <p
-                  className="text-cream/50 text-sm"
+                  className="text-foreground/50 text-sm"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {dish.description}
@@ -138,7 +138,7 @@ export default function MenuSection() {
                   {cat.items.map((item) => (
                     <li
                       key={item}
-                      className="text-cream/60 text-sm flex items-center gap-2 hover:text-cream transition-colors"
+                      className="text-foreground/60 text-sm flex items-center gap-2 hover:text-foreground transition-colors"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
                       <span className="w-1 h-1 rounded-full bg-gold/40" />

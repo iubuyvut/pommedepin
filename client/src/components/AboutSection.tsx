@@ -16,7 +16,7 @@ function StatItem({ value, suffix, label, isDecimal }: { value: number; suffix: 
       <div className="text-4xl md:text-5xl font-bold text-gold" style={{ fontFamily: "'Cormorant', serif" }}>
         {isDecimal ? `${count}${suffix}` : `${count}${suffix}`}
       </div>
-      <div className="text-sm text-cream/50 mt-2 uppercase tracking-wider" style={{ fontFamily: "'Outfit', sans-serif" }}>
+      <div className="text-sm text-foreground mt-2 uppercase tracking-wider" style={{ fontFamily: "'Outfit', sans-serif" }}>
         {label}
       </div>
     </div>
@@ -40,7 +40,7 @@ export default function AboutSection() {
           className="max-w-5xl mx-auto mb-20"
         >
           <p
-            className="text-3xl md:text-4xl lg:text-5xl leading-snug font-light text-cream/90"
+            className="text-3xl md:text-4xl lg:text-5xl leading-snug font-light text-foreground"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
             <motion.span
@@ -111,7 +111,7 @@ export default function AboutSection() {
               Notre Histoire
             </span>
             <h2
-              className="text-4xl md:text-5xl font-bold text-cream mb-6 leading-tight"
+              className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               Une tradition
@@ -119,7 +119,7 @@ export default function AboutSection() {
               <span className="text-gold italic">de passion</span>
             </h2>
             <p
-              className="text-cream/60 text-lg leading-relaxed mb-8"
+              className="text-foreground text-lg leading-relaxed mb-8"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
               Depuis plus de 20 ans, Le Il Divido perpétue l'art de la pizza artisanale à Uccle.

@@ -52,7 +52,7 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={star}
           className={`w-4 h-4 ${
-            star <= rating ? "text-gold fill-gold" : "text-cream/20"
+            star <= rating ? "text-gold fill-gold" : "text-foreground/20"
           }`}
         />
       ))}
@@ -80,7 +80,7 @@ export default function ReviewsSection() {
             Témoignages
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
             Ce que disent <span className="text-gold italic">nos clients</span>
@@ -106,7 +106,7 @@ export default function ReviewsSection() {
               <StarRating rating={4} />
             </div>
             <p
-              className="text-cream/40 text-sm"
+              className="text-foreground/40 text-sm"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
               247 avis Google
@@ -118,7 +118,7 @@ export default function ReviewsSection() {
             {ratingDistribution.map((item) => (
               <div key={item.stars} className="flex items-center gap-3">
                 <span
-                  className="text-cream/50 text-sm w-3 text-right"
+                  className="text-foreground/50 text-sm w-3 text-right"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {item.stars}
@@ -133,7 +133,7 @@ export default function ReviewsSection() {
                   />
                 </div>
                 <span
-                  className="text-cream/40 text-xs w-8"
+                  className="text-foreground/40 text-xs w-8"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {item.percentage}%
@@ -168,13 +168,13 @@ export default function ReviewsSection() {
                 </div>
                 <div>
                   <h4
-                    className="text-cream font-semibold text-base"
+                    className="text-foreground font-semibold text-base"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     {review.name}
                   </h4>
                   <p
-                    className="text-cream/40 text-xs"
+                    className="text-foreground/40 text-xs"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     {review.badge}
@@ -186,7 +186,7 @@ export default function ReviewsSection() {
               <div className="flex items-center gap-3 mb-3">
                 <StarRating rating={review.rating} />
                 <span
-                  className="text-cream/30 text-xs"
+                  className="text-foreground/30 text-xs"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {review.date}
@@ -195,7 +195,7 @@ export default function ReviewsSection() {
 
               {/* Text */}
               <p
-                className="text-cream/60 text-sm leading-relaxed"
+                className="text-foreground/60 text-sm leading-relaxed"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 "{review.text}"
@@ -221,10 +221,10 @@ export default function ReviewsSection() {
           ].map((tag) => (
             <span
               key={tag.label}
-              className="px-4 py-2 rounded-full bg-card/50 border border-border/20 text-cream/50 text-sm hover:border-gold/30 hover:text-gold transition-all duration-300"
+              className="px-4 py-2 rounded-full bg-card/50 border border-border/20 text-foreground/50 text-sm hover:border-gold/30 hover:text-gold transition-all duration-300"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
-              {tag.label} <span className="text-cream/30">{tag.count}</span>
+              {tag.label} <span className="text-foreground/30">{tag.count}</span>
             </span>
           ))}
         </motion.div>
