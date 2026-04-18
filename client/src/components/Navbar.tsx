@@ -32,8 +32,8 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3 group">
           <span
-            className="text-2xl md:text-3xl font-bold tracking-tight text-gold"
-            style={{ fontFamily: "'Cormorant', serif" }}
+            className="text-2xl md:text-3xl font-bold tracking-tight text-foreground"
+            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Il Divido
           </span>
@@ -45,7 +45,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-cream/70 hover:text-gold transition-colors duration-300 tracking-wide uppercase"
+              className="text-sm font-medium text-foreground hover:text-accent transition-colors duration-300 tracking-wide uppercase"
               style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "0.1em" }}
             >
               {link.label}
