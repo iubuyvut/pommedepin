@@ -58,10 +58,11 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--border);
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: 'Outfit', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -73,33 +74,37 @@
   [type="button"]:not(:disabled),
   [type="submit"]:not(:disabled),
   [type="reset"]:not(:disabled) {
-    @apply cursor-pointer;
+    cursor: pointer;
   }
   input,
   button,
   textarea,
   select {
-    @apply font-inherit;
+    font-family: inherit;
   }
   input::placeholder,
   textarea::placeholder {
-    @apply text-muted-foreground;
+    color: var(--muted-foreground);
   }
 }
 
 @layer components {
   .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 /* Utility classes for common patterns */
 .text-primary {
-  @apply text-foreground;
+  color: var(--foreground);
 }
 
 .bg-primary {
-  @apply bg-background;
+  background-color: var(--background);
 }
 
 /* Form inputs - make them visible */
