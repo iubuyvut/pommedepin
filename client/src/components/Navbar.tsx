@@ -32,8 +32,8 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3 group">
           <span
-            className="text-2xl md:text-3xl font-bold tracking-tight text-foreground"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-2xl md:text-3xl font-bold tracking-tight text-gold"
+            style={{ fontFamily: "'Cormorant', serif" }}
           >
             Il Divido
           </span>
@@ -45,7 +45,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground hover:text-accent transition-colors duration-300 tracking-wide uppercase"
+              className="text-sm font-medium text-cream/70 hover:text-gold transition-colors duration-300 tracking-wide uppercase"
               style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "0.1em" }}
             >
               {link.label}
@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="#reservation"
-            className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-primary text-background rounded-full text-sm font-semibold hover:bg-primary-light transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,169,110,0.3)]"
+            className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-gold text-background rounded-full text-sm font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,169,110,0.3)]"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             <CalendarDays className="w-4 h-4" />
@@ -66,7 +66,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-foreground/80 hover:text-accent transition-colors"
+            className="lg:hidden text-cream/80 hover:text-gold transition-colors"
             aria-label="Menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -86,7 +86,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-base text-foreground/80 hover:text-accent transition-colors py-2 uppercase tracking-wider"
+              className="text-base text-cream/80 hover:text-gold transition-colors py-2 uppercase tracking-wider"
               style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "0.08em" }}
             >
               {link.label}
@@ -94,7 +94,7 @@ export default function Navbar() {
           ))}
           <a
             href="#reservation"
-            className="flex items-center justify-center gap-2 px-5 py-3 bg-primary text-background rounded-full text-sm font-semibold mt-2"
+            className="flex items-center justify-center gap-2 px-5 py-3 bg-gold text-background rounded-full text-sm font-semibold mt-2"
             style={{ fontFamily: "'Outfit', sans-serif" }}
             onClick={() => setMobileOpen(false)}
           >

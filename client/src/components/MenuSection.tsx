@@ -38,7 +38,7 @@ export default function MenuSection() {
   const { ref, isVisible } = useScrollReveal(0.1);
 
   return (
-    <section id="menu" className="relative py-24 md:py-32 bg-primary/30">
+    <section id="menu" className="relative py-24 md:py-32 bg-secondary/30">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
@@ -52,19 +52,19 @@ export default function MenuSection() {
           className="text-center mb-16"
         >
           <span
-            className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block"
+            className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Nos Créations
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-4"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
-            Menu & <span className="text-accent italic">Plats Populaires</span>
+            Menu & <span className="text-gold italic">Plats Populaires</span>
           </h2>
           <p
-            className="text-foreground/50 text-lg max-w-2xl mx-auto"
+            className="text-cream/50 text-lg max-w-2xl mx-auto"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Découvrez nos pizzas artisanales, préparées avec passion et des ingrédients de première qualité.
@@ -79,7 +79,7 @@ export default function MenuSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 + i * 0.15 }}
-              className="group relative overflow-hidden rounded-2xl bg-card border border-border/30 hover:border-primary/30 transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl bg-card border border-border/30 hover:border-gold/30 transition-all duration-500"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -89,7 +89,7 @@ export default function MenuSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                 <span
-                  className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary/20 border border-primary/40 text-accent text-xs font-medium"
+                  className="absolute top-4 left-4 px-3 py-1 rounded-full bg-gold/20 border border-gold/40 text-gold text-xs font-medium"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {dish.tag}
@@ -97,13 +97,13 @@ export default function MenuSection() {
               </div>
               <div className="p-6">
                 <h3
-                  className="text-2xl font-bold text-foreground mb-2"
+                  className="text-2xl font-bold text-cream mb-2"
                   style={{ fontFamily: "'Cormorant', serif" }}
                 >
                   {dish.name}
                 </h3>
                 <p
-                  className="text-foreground/50 text-sm"
+                  className="text-cream/50 text-sm"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {dish.description}
@@ -129,7 +129,7 @@ export default function MenuSection() {
                 className="group"
               >
                 <h4
-                  className="text-xl font-bold text-accent mb-4 pb-3 border-b border-primary/20"
+                  className="text-xl font-bold text-gold mb-4 pb-3 border-b border-gold/20"
                   style={{ fontFamily: "'Cormorant', serif" }}
                 >
                   {cat.name}
@@ -138,10 +138,10 @@ export default function MenuSection() {
                   {cat.items.map((item) => (
                     <li
                       key={item}
-                      className="text-foreground/60 text-sm flex items-center gap-2 hover:text-foreground transition-colors"
+                      className="text-cream/60 text-sm flex items-center gap-2 hover:text-cream transition-colors"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
-                      <span className="w-1 h-1 rounded-full bg-primary/40" />
+                      <span className="w-1 h-1 rounded-full bg-gold/40" />
                       {item}
                     </li>
                   ))}
@@ -162,7 +162,7 @@ export default function MenuSection() {
             href="https://pommedepin.be"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-primary/40 text-accent rounded-full text-sm font-medium hover:bg-primary/10 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-3.5 border border-gold/40 text-gold rounded-full text-sm font-medium hover:bg-gold/10 transition-all duration-300"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Voir le menu complet

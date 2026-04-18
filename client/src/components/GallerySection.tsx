@@ -19,7 +19,7 @@ export default function GallerySection() {
   const { ref, isVisible } = useScrollReveal(0.05);
 
   return (
-    <section className="relative py-24 md:py-32 bg-primary/20">
+    <section className="relative py-24 md:py-32 bg-secondary/20">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
       <div ref={ref} className="container">
@@ -31,16 +31,16 @@ export default function GallerySection() {
           className="text-center mb-16"
         >
           <span
-            className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block"
+            className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Galerie
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
-            Photos & <span className="text-accent italic">Atmosphère</span>
+            Photos & <span className="text-gold italic">Atmosphère</span>
           </h2>
         </motion.div>
 
@@ -64,7 +64,7 @@ export default function GallerySection() {
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/30 transition-colors duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <p
-                  className="text-foreground text-sm"
+                  className="text-cream text-sm"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {photo.alt}

@@ -52,7 +52,7 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={star}
           className={`w-4 h-4 ${
-            star <= rating ? "text-accent fill-gold" : "text-foreground/20"
+            star <= rating ? "text-gold fill-gold" : "text-cream/20"
           }`}
         />
       ))}
@@ -74,16 +74,16 @@ export default function ReviewsSection() {
           className="text-center mb-16"
         >
           <span
-            className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block"
+            className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Témoignages
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-4"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
-            Ce que disent <span className="text-accent italic">nos clients</span>
+            Ce que disent <span className="text-gold italic">nos clients</span>
           </h2>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function ReviewsSection() {
           {/* Big Rating */}
           <div className="text-center">
             <div
-              className="text-7xl font-bold text-accent"
+              className="text-7xl font-bold text-gold"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               4,4
@@ -106,7 +106,7 @@ export default function ReviewsSection() {
               <StarRating rating={4} />
             </div>
             <p
-              className="text-foreground/40 text-sm"
+              className="text-cream/40 text-sm"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
               247 avis Google
@@ -118,22 +118,22 @@ export default function ReviewsSection() {
             {ratingDistribution.map((item) => (
               <div key={item.stars} className="flex items-center gap-3">
                 <span
-                  className="text-foreground/50 text-sm w-3 text-right"
+                  className="text-cream/50 text-sm w-3 text-right"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {item.stars}
                 </span>
-                <Star className="w-3.5 h-3.5 text-accent fill-gold" />
+                <Star className="w-3.5 h-3.5 text-gold fill-gold" />
                 <div className="flex-1 h-2 rounded-full bg-border/30 overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={isVisible ? { width: `${item.percentage}%` } : {}}
                     transition={{ duration: 1, delay: 0.5 + (5 - item.stars) * 0.1 }}
-                    className="h-full rounded-full bg-primary"
+                    className="h-full rounded-full bg-gold"
                   />
                 </div>
                 <span
-                  className="text-foreground/40 text-xs w-8"
+                  className="text-cream/40 text-xs w-8"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {item.percentage}%
@@ -151,16 +151,16 @@ export default function ReviewsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.4 + i * 0.15 }}
-              className="group p-6 rounded-2xl bg-card/40 border border-border/20 hover:border-primary/20 transition-all duration-500 relative"
+              className="group p-6 rounded-2xl bg-card/40 border border-border/20 hover:border-gold/20 transition-all duration-500 relative"
             >
               {/* Quote icon */}
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-accent/10 group-hover:text-accent/20 transition-colors" />
+              <Quote className="absolute top-4 right-4 w-8 h-8 text-gold/10 group-hover:text-gold/20 transition-colors" />
 
               {/* Header */}
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-11 h-11 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center">
+                <div className="w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center">
                   <span
-                    className="text-accent font-bold text-lg"
+                    className="text-gold font-bold text-lg"
                     style={{ fontFamily: "'Cormorant', serif" }}
                   >
                     {review.initial}
@@ -168,13 +168,13 @@ export default function ReviewsSection() {
                 </div>
                 <div>
                   <h4
-                    className="text-foreground font-semibold text-base"
+                    className="text-cream font-semibold text-base"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     {review.name}
                   </h4>
                   <p
-                    className="text-foreground/40 text-xs"
+                    className="text-cream/40 text-xs"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     {review.badge}
@@ -186,7 +186,7 @@ export default function ReviewsSection() {
               <div className="flex items-center gap-3 mb-3">
                 <StarRating rating={review.rating} />
                 <span
-                  className="text-foreground/30 text-xs"
+                  className="text-cream/30 text-xs"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {review.date}
@@ -195,7 +195,7 @@ export default function ReviewsSection() {
 
               {/* Text */}
               <p
-                className="text-foreground/60 text-sm leading-relaxed"
+                className="text-cream/60 text-sm leading-relaxed"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 "{review.text}"
@@ -221,10 +221,10 @@ export default function ReviewsSection() {
           ].map((tag) => (
             <span
               key={tag.label}
-              className="px-4 py-2 rounded-full bg-card/50 border border-border/20 text-foreground/50 text-sm hover:border-primary/30 hover:text-accent transition-all duration-300"
+              className="px-4 py-2 rounded-full bg-card/50 border border-border/20 text-cream/50 text-sm hover:border-gold/30 hover:text-gold transition-all duration-300"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
-              {tag.label} <span className="text-foreground/30">{tag.count}</span>
+              {tag.label} <span className="text-cream/30">{tag.count}</span>
             </span>
           ))}
         </motion.div>

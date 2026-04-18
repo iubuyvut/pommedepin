@@ -13,10 +13,10 @@ function StatItem({ value, suffix, label, isDecimal }: { value: number; suffix: 
   const { ref, count } = useCountUp(value, 2000);
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl md:text-5xl font-bold text-accent" style={{ fontFamily: "'Cormorant', serif" }}>
+      <div className="text-4xl md:text-5xl font-bold text-gold" style={{ fontFamily: "'Cormorant', serif" }}>
         {isDecimal ? `${count}${suffix}` : `${count}${suffix}`}
       </div>
-      <div className="text-sm text-foreground/50 mt-2 uppercase tracking-wider" style={{ fontFamily: "'Outfit', sans-serif" }}>
+      <div className="text-sm text-cream/50 mt-2 uppercase tracking-wider" style={{ fontFamily: "'Outfit', sans-serif" }}>
         {label}
       </div>
     </div>
@@ -40,7 +40,7 @@ export default function AboutSection() {
           className="max-w-5xl mx-auto mb-20"
         >
           <p
-            className="text-3xl md:text-4xl lg:text-5xl leading-snug font-light text-foreground/90"
+            className="text-3xl md:text-4xl lg:text-5xl leading-snug font-light text-cream/90"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
             <motion.span
@@ -54,7 +54,7 @@ export default function AboutSection() {
               initial={{ opacity: 0.15 }}
               animate={isVisible ? { opacity: 1 } : {}}
               transition={{ duration: 1.2, delay: 0.5 }}
-              className="text-accent"
+              className="text-gold"
             >
               nichée au coeur d'Uccle
             </motion.span>{" "}
@@ -69,7 +69,7 @@ export default function AboutSection() {
               initial={{ opacity: 0.15 }}
               animate={isVisible ? { opacity: 1 } : {}}
               transition={{ duration: 1.2, delay: 1.1 }}
-              className="text-accent italic"
+              className="text-gold italic"
             >
               chaleureux et authentique.
             </motion.span>
@@ -94,8 +94,8 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
             {/* Decorative frame */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary/30 rounded-tl-2xl" />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-primary/30 rounded-br-2xl" />
+            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-gold/30 rounded-tl-2xl" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-gold/30 rounded-br-2xl" />
           </motion.div>
 
           {/* Text + Stats */}
@@ -105,21 +105,21 @@ export default function AboutSection() {
             transition={{ duration: 1, delay: 0.5 }}
           >
             <span
-              className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block"
+              className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
               Notre Histoire
             </span>
             <h2
-              className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight"
+              className="text-4xl md:text-5xl font-bold text-cream mb-6 leading-tight"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               Une tradition
               <br />
-              <span className="text-accent italic">de passion</span>
+              <span className="text-gold italic">de passion</span>
             </h2>
             <p
-              className="text-foreground/60 text-lg leading-relaxed mb-8"
+              className="text-cream/60 text-lg leading-relaxed mb-8"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
               Depuis plus de 20 ans, Le Il Divido perpétue l'art de la pizza artisanale à Uccle.
