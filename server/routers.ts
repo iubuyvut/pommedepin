@@ -1,27 +1,16 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
-import {
-  createWorkspace,
-  getWorkspacesByUserId,
-  createParticipant,
-  getParticipantsByWorkspace,
-  createExpense,
-  getExpensesByWorkspace,
-  createExpenseSplit,
-  calculateSettlements,
-  createJustificatif,
-  getJustificatifsByExpense,
-  logAudit,
-} from "./db";
+import { publicProcedure, router } from "./_core/trpc";
+import { createReservation, getReservationById } from "./db";
 import { z } from "zod";
+import { sendReservationEmail } from "./_core/email";
 
 export const appRouter = router({
+    // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
   system: systemRouter,
-
   auth: router({
-    me: publicProcedure.query((opts) => opts.ctx.user),
+    me: publicProcedure.query(opts => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {
       const cookieOptions = getSessionCookieOptions(ctx.req);
       ctx.res.clearCookie(COOKIE_NAME, { ...cookieOptions, maxAge: -1 });
@@ -31,212 +20,48 @@ export const appRouter = router({
     }),
   }),
 
-  // ============ WORKSPACE PROCEDURES ============
-  workspaces: router({
-    create: protectedProcedure
-      .input(
-        z.object({
-          name: z.string().min(1).max(255),
-          slug: z.string().min(1).max(255),
-          description: z.string().optional(),
-        })
-      )
-      .mutation(async ({ input, ctx }) => {
-        const workspace = await createWorkspace(
-          ctx.user.id,
-          input.name,
-          input.slug,
-          input.description
-        );
+  reservations: router({
+    create: publicProcedure
+      .input(z.object({
+        date: z.string(),
+        time: z.string(),
+        guests: z.number(),
+        name: z.string(),
+        phone: z.string(),
+        email: z.string().email(),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const reservation = await createReservation({
+          date: input.date,
+          time: input.time,
+          guests: input.guests,
+          name: input.name,
+          phone: input.phone,
+          email: input.email,
+          notes: input.notes || null,
+          status: "confirmed",
+        });
 
-        await logAudit(
-          workspace[0].insertId as any,
-          ctx.user.id,
-          "CREATE_WORKSPACE",
-          "workspace",
-          workspace[0].insertId as any,
-          { name: input.name }
-        );
-
-        return workspace;
-      }),
-
-    list: protectedProcedure.query(async ({ ctx }) => {
-      return await getWorkspacesByUserId(ctx.user.id);
-    }),
-  }),
-
-  // ============ PARTICIPANT PROCEDURES ============
-  participants: router({
-    create: protectedProcedure
-      .input(
-        z.object({
-          workspaceId: z.number(),
-          name: z.string().min(1).max(255),
-          email: z.string().email().optional(),
-          color: z.string().regex(/^#[0-9A-F]{6}$/i).optional(),
-        })
-      )
-      .mutation(async ({ input, ctx }) => {
-        const participant = await createParticipant(
-          input.workspaceId,
-          input.name,
-          input.email,
-          input.color
-        );
-
-        await logAudit(
-          input.workspaceId,
-          ctx.user.id,
-          "CREATE_PARTICIPANT",
-          "participant",
-          participant[0].insertId as any,
-          { name: input.name }
-        );
-
-        return participant;
-      }),
-
-    list: protectedProcedure
-      .input(z.object({ workspaceId: z.number() }))
-      .query(async ({ input }) => {
-        return await getParticipantsByWorkspace(input.workspaceId);
-      }),
-  }),
-
-  // ============ EXPENSE PROCEDURES ============
-  expenses: router({
-    create: protectedProcedure
-      .input(
-        z.object({
-          workspaceId: z.number(),
-          categoryId: z.number(),
-          paidByParticipantId: z.number(),
-          description: z.string().min(1).max(255),
-          amount: z.string().regex(/^\d+(\.\d{1,2})?$/), // Strict decimal validation
-          currency: z.string().default("EUR"),
-          date: z.date(),
-          notes: z.string().optional(),
-          splits: z
-            .array(
-              z.object({
-                participantId: z.number(),
-                splitType: z.enum(["equal", "percentage", "fixed"]),
-                value: z.string().optional(),
-              })
-            )
-            .optional(),
-        })
-      )
-      .mutation(async ({ input, ctx }) => {
-        const expense = await createExpense(
-          input.workspaceId,
-          input.categoryId,
-          input.paidByParticipantId,
-          input.description,
-          input.amount,
-          input.currency,
-          input.date,
-          input.notes
-        );
-
-        // Create expense splits
-        if (input.splits && input.splits.length > 0) {
-          const expenseAmount = parseFloat(input.amount);
-          const splits = input.splits;
-
-          if (input.splits[0].splitType === "equal") {
-            const amountPerPerson = expenseAmount / splits.length;
-            for (const split of splits) {
-              await createExpenseSplit(
-                expense[0].insertId as any,
-                split.participantId,
-                "equal",
-                "",
-                amountPerPerson.toString()
-              );
-            }
-          } else if (input.splits[0].splitType === "percentage") {
-            for (const split of splits) {
-              const percentage = parseFloat(split.value || "0");
-              const amount = (expenseAmount * percentage) / 100;
-              await createExpenseSplit(
-                expense[0].insertId as any,
-                split.participantId,
-                "percentage",
-                split.value || "0",
-                amount.toString()
-              );
-            }
-          } else if (input.splits[0].splitType === "fixed") {
-            for (const split of splits) {
-              await createExpenseSplit(
-                expense[0].insertId as any,
-                split.participantId,
-                "fixed",
-                split.value || "0",
-                split.value || "0"
-              );
-            }
-          }
+        // Send confirmation email
+        try {
+          await sendReservationEmail({
+            email: reservation.email,
+            name: reservation.name,
+            date: reservation.date,
+            time: reservation.time,
+            guests: reservation.guests,
+          });
+        } catch (error) {
+          console.error("Failed to send reservation email:", error);
         }
 
-        await logAudit(
-          input.workspaceId,
-          ctx.user.id,
-          "CREATE_EXPENSE",
-          "expense",
-          expense[0].insertId as any,
-          { description: input.description, amount: input.amount }
-        );
-
-        return expense;
+        return reservation;
       }),
-
-    list: protectedProcedure
-      .input(z.object({ workspaceId: z.number() }))
+    get: publicProcedure
+      .input(z.object({ id: z.number() }))
       .query(async ({ input }) => {
-        return await getExpensesByWorkspace(input.workspaceId);
-      }),
-  }),
-
-  // ============ SETTLEMENT PROCEDURES ============
-  settlements: router({
-    calculate: protectedProcedure
-      .input(z.object({ workspaceId: z.number() }))
-      .query(async ({ input }) => {
-        return await calculateSettlements(input.workspaceId);
-      }),
-  }),
-
-  // ============ JUSTIFICATIF PROCEDURES ============
-  justificatifs: router({
-    create: protectedProcedure
-      .input(
-        z.object({
-          expenseId: z.number(),
-          fileName: z.string(),
-          fileUrl: z.string(),
-          fileSize: z.number(),
-          mimeType: z.string(),
-          ocrData: z.string().optional(),
-        })
-      )
-      .mutation(async ({ input, ctx }) => {
-        return await createJustificatif(
-          input.expenseId,
-          input.fileName,
-          input.fileUrl,
-          input.fileSize,
-          input.mimeType,
-          input.ocrData
-        );
-      }),
-
-    list: protectedProcedure
-      .input(z.object({ expenseId: z.number() }))
-      .query(async ({ input }) => {
-        return await getJustificatifsByExpense(input.expenseId);
+        return getReservationById(input.id);
       }),
   }),
 });

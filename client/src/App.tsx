@@ -4,37 +4,15 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { useAuth } from "@/_core/hooks/useAuth";
-import Dashboard from "./pages/Dashboard";
-import Login from "./pages/Login";
-import { Loader2 } from "lucide-react";
+import Home from "./pages/Home";
 
 function Router() {
-  const { isAuthenticated, loading } = useAuth();
-
-  if (loading) {
-    return (
-      <div className="flex-center min-h-screen">
-        <Loader2 className="w-8 h-8 animate-spin text-primary" />
-      </div>
-    );
-  }
-
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      {isAuthenticated ? (
-        <>
-          <Route path={"/"} component={Dashboard} />
-          <Route path={"/404"} component={NotFound} />
-          <Route component={NotFound} />
-        </>
-      ) : (
-        <>
-          <Route path={"/"} component={Login} />
-          <Route path={"/404"} component={NotFound} />
-          <Route component={NotFound} />
-        </>
-      )}
+      <Route path={"/"} component={Home} />
+      <Route path={"/404"} component={NotFound} />
+      <Route component={NotFound} />
     </Switch>
   );
 }
