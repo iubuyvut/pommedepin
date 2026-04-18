@@ -49,19 +49,19 @@ export default function WhyUsSection() {
           className="text-center mb-16 max-w-3xl mx-auto"
         >
           <span
-            className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block"
+            className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Pourquoi Nous Choisir
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
-            Une adresse <span className="text-gold italic">à garder</span>
+            Une adresse <span className="text-accent italic">à garder</span>
           </h2>
           <p
-            className="text-cream/50 text-lg"
+            className="text-foreground/50 text-lg"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Ce qui fait de La Pomme de Pin une expérience unique à Uccle.
@@ -76,21 +76,21 @@ export default function WhyUsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 + i * 0.15 }}
-              className="group relative p-8 rounded-2xl bg-card/50 border border-border/20 hover:border-gold/30 transition-all duration-500 hover:bg-card/80"
+              className="group relative p-8 rounded-2xl bg-card/50 border border-border/20 hover:border-primary/30 transition-all duration-500 hover:bg-card/80"
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors duration-300">
-                <feature.icon className="w-6 h-6 text-gold" />
+              <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
+                <feature.icon className="w-6 h-6 text-accent" />
               </div>
 
               <h3
-                className="text-2xl font-bold text-cream mb-3"
+                className="text-2xl font-bold text-foreground mb-3"
                 style={{ fontFamily: "'Cormorant', serif" }}
               >
                 {feature.title}
               </h3>
               <p
-                className="text-cream/50 leading-relaxed"
+                className="text-foreground/50 leading-relaxed"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 {feature.description}
@@ -110,14 +110,14 @@ export default function WhyUsSection() {
           className="text-center mt-16"
         >
           <button
-            className="inline-flex items-center gap-3 px-10 py-4 bg-gold text-background rounded-full text-base font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,110,0.3)]"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-primary text-background rounded-full text-base font-semibold hover:bg-primary-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,110,0.3)]"
             style={{ fontFamily: "'Outfit', sans-serif" }}
             onClick={() => document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Réservez votre table
           </button>
           <p
-            className="text-cream/30 text-sm mt-4"
+            className="text-foreground/30 text-sm mt-4"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Ouvert tous les soirs à partir de 19h00

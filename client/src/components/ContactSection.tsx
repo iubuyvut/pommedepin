@@ -54,7 +54,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 bg-secondary/30">
+    <section id="contact" className="relative py-24 md:py-32 bg-primary/30">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
       <div ref={ref} className="container">
@@ -66,19 +66,19 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <span
-            className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block"
+            className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Nous Trouver
           </span>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
-            Venez nous <span className="text-gold italic">rendre visite</span>
+            Venez nous <span className="text-accent italic">rendre visite</span>
           </h2>
           <p
-            className="text-cream/50 text-lg max-w-2xl mx-auto"
+            className="text-foreground/50 text-lg max-w-2xl mx-auto"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Nous sommes situés au coeur d'Uccle, dans un cadre chaleureux qui vous attend chaque soir.
@@ -122,17 +122,17 @@ export default function ContactSection() {
                       href={item.href}
                       target={item.href.startsWith("http") ? "_blank" : undefined}
                       rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="block p-4 rounded-xl bg-card/50 border border-border/20 hover:border-gold/30 transition-all duration-300 group h-full"
+                      className="block p-4 rounded-xl bg-card/50 border border-border/20 hover:border-primary/30 transition-all duration-300 group h-full"
                     >
-                      <item.icon className="w-5 h-5 text-gold mb-2 group-hover:scale-110 transition-transform" />
+                      <item.icon className="w-5 h-5 text-accent mb-2 group-hover:scale-110 transition-transform" />
                       <p
-                        className="text-cream/40 text-xs uppercase tracking-wider mb-1"
+                        className="text-foreground/40 text-xs uppercase tracking-wider mb-1"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                       >
                         {item.label}
                       </p>
                       <p
-                        className="text-cream text-sm font-medium group-hover:text-gold transition-colors"
+                        className="text-foreground text-sm font-medium group-hover:text-accent transition-colors"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                       >
                         {item.value}
@@ -140,15 +140,15 @@ export default function ContactSection() {
                     </a>
                   ) : (
                     <div className="block p-4 rounded-xl bg-card/50 border border-border/20 h-full">
-                      <item.icon className="w-5 h-5 text-gold mb-2" />
+                      <item.icon className="w-5 h-5 text-accent mb-2" />
                       <p
-                        className="text-cream/40 text-xs uppercase tracking-wider mb-1"
+                        className="text-foreground/40 text-xs uppercase tracking-wider mb-1"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                       >
                         {item.label}
                       </p>
                       <p
-                        className="text-cream text-sm font-medium"
+                        className="text-foreground text-sm font-medium"
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                       >
                         {item.value}
@@ -167,7 +167,7 @@ export default function ContactSection() {
               className="mt-6 p-6 rounded-xl bg-card/50 border border-border/20"
             >
               <h4
-                className="text-lg font-bold text-gold mb-4 flex items-center gap-2"
+                className="text-lg font-bold text-accent mb-4 flex items-center gap-2"
                 style={{ fontFamily: "'Cormorant', serif" }}
               >
                 <Clock className="w-5 h-5" />
@@ -180,14 +180,14 @@ export default function ContactSection() {
                     className="flex justify-between items-center py-1.5 border-b border-border/10 last:border-0"
                   >
                     <span
-                      className="text-cream/60 text-sm"
+                      className="text-foreground/60 text-sm"
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
                       {h.day}
                     </span>
                     <span
                       className={`text-sm font-medium ${
-                        h.time === "Fermé" ? "text-cream/30" : "text-cream"
+                        h.time === "Fermé" ? "text-foreground/30" : "text-foreground"
                       }`}
                       style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
@@ -207,13 +207,13 @@ export default function ContactSection() {
           >
             <div className="p-8 rounded-2xl bg-card/50 border border-border/20">
               <h3
-                className="text-3xl font-bold text-cream mb-2"
+                className="text-3xl font-bold text-foreground mb-2"
                 style={{ fontFamily: "'Cormorant', serif" }}
               >
                 Contactez-nous
               </h3>
               <p
-                className="text-cream/50 text-sm mb-8"
+                className="text-foreground/50 text-sm mb-8"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 Envoyez-nous un message et nous vous répondrons rapidement.
@@ -222,7 +222,7 @@ export default function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label
-                    className="text-cream/60 text-sm mb-2 block"
+                    className="text-foreground/60 text-sm mb-2 block"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     Nom
@@ -231,7 +231,7 @@ export default function ContactSection() {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-cream placeholder:text-cream/20 focus:border-gold/50 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-primary/50 focus:outline-none transition-colors"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                     placeholder="Votre nom"
                     required
@@ -239,7 +239,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label
-                    className="text-cream/60 text-sm mb-2 block"
+                    className="text-foreground/60 text-sm mb-2 block"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     Téléphone
@@ -248,7 +248,7 @@ export default function ContactSection() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-cream placeholder:text-cream/20 focus:border-gold/50 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-primary/50 focus:outline-none transition-colors"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                     placeholder="Votre numéro"
                     required
@@ -256,7 +256,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label
-                    className="text-cream/60 text-sm mb-2 block"
+                    className="text-foreground/60 text-sm mb-2 block"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     Message
@@ -265,7 +265,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-cream placeholder:text-cream/20 focus:border-gold/50 focus:outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border/30 text-foreground placeholder:text-foreground/20 focus:border-primary/50 focus:outline-none transition-colors resize-none"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                     placeholder="Votre message..."
                     required
@@ -274,7 +274,7 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gold text-background rounded-xl text-base font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,169,110,0.3)]"
+                  className="w-full py-4 bg-primary text-background rounded-xl text-base font-semibold hover:bg-primary-light transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,169,110,0.3)]"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {submitted ? "Message envoyé !" : "Envoyer le message"}
@@ -284,7 +284,7 @@ export default function ContactSection() {
               {/* Quick Actions */}
               <div className="mt-8 pt-6 border-t border-border/20">
                 <p
-                  className="text-cream/40 text-sm mb-4"
+                  className="text-foreground/40 text-sm mb-4"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   Ou contactez-nous directement :
@@ -292,7 +292,7 @@ export default function ContactSection() {
                 <div className="flex gap-3">
                   <a
                     href="tel:023742736"
-                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-gold/30 text-gold text-sm font-medium hover:bg-gold/10 transition-all duration-300"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-primary/30 text-accent text-sm font-medium hover:bg-primary/10 transition-all duration-300"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     <Phone className="w-4 h-4" />
@@ -302,7 +302,7 @@ export default function ContactSection() {
                     href="https://maps.google.com/?q=La+Pomme+de+Pin+Uccle"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-gold/30 text-gold text-sm font-medium hover:bg-gold/10 transition-all duration-300"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-primary/30 text-accent text-sm font-medium hover:bg-primary/10 transition-all duration-300"
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                   >
                     <Navigation className="w-4 h-4" />

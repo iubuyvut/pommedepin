@@ -73,14 +73,14 @@ export default function HeroSection() {
           >
             <a
               href="#reservation"
-              className="group flex items-center gap-3 px-8 py-4 bg-gold text-background rounded-full text-base font-semibold hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,110,0.4)]"
+              className="group flex items-center gap-3 px-8 py-4 bg-primary text-background rounded-full text-base font-semibold hover:bg-primary-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,110,0.4)]"
               style={{ fontFamily: "'Outfit', sans-serif" }}
             >
               <CalendarDays className="w-5 h-5 group-hover:animate-pulse" />
               Réserver une table
             </a>
             <button
-              className="flex items-center gap-3 px-8 py-4 border border-cream/20 text-cream rounded-full text-base font-medium hover:border-gold/50 hover:text-gold transition-all duration-300"
+              className="flex items-center gap-3 px-8 py-4 border border-cream/20 text-foreground rounded-full text-base font-medium hover:border-primary/50 hover:text-accent transition-all duration-300"
               style={{ fontFamily: "'Outfit', sans-serif" }}
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
@@ -99,7 +99,7 @@ export default function HeroSection() {
             {["Repas sur place", "Vente à emporter", "20–30 € / pers."].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-cream/50 text-sm"
+                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-foreground/50 text-sm"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 {item}
@@ -116,10 +116,10 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 1.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-cream/30 text-xs uppercase tracking-[0.2em]" style={{ fontFamily: "'Outfit', sans-serif" }}>
+        <span className="text-foreground/30 text-xs uppercase tracking-[0.2em]" style={{ fontFamily: "'Outfit', sans-serif" }}>
           Découvrir
         </span>
-        <ChevronDown className="w-5 h-5 text-gold/50 animate-bounce" />
+        <ChevronDown className="w-5 h-5 text-accent/50 animate-bounce" />
       </motion.div>
     </section>
   );
