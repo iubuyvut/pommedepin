@@ -2,7 +2,7 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
-import { createReservation, getReservationById } from "./db";
+import { createReservation, getReservationById, createReview, getApprovedReviews } from "./db";
 import { z } from "zod";
 import { sendReservationEmail } from "./_core/email";
 
@@ -62,6 +62,30 @@ export const appRouter = router({
       .input(z.object({ id: z.number() }))
       .query(async ({ input }) => {
         return getReservationById(input.id);
+      }),
+  }),
+
+  reviews: router({
+    create: publicProcedure
+      .input(z.object({
+        name: z.string().min(2),
+        email: z.string().email(),
+        rating: z.number().min(1).max(5),
+        comment: z.string().min(10).max(1000),
+      }))
+      .mutation(async ({ input }) => {
+        return createReview({
+          name: input.name,
+          email: input.email,
+          rating: input.rating,
+          comment: input.comment,
+          status: "pending",
+        });
+      }),
+    getApproved: publicProcedure
+      .input(z.object({ limit: z.number().optional() }))
+      .query(async ({ input }) => {
+        return getApprovedReviews(input.limit || 10);
       }),
   }),
 });

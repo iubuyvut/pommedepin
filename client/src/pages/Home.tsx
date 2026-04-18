@@ -10,6 +10,7 @@ import AboutSection from "@/components/AboutSection";
 import MenuSection from "@/components/MenuSection";
 import ReservationSection from "@/components/ReservationSection";
 import ReviewsSection from "@/components/ReviewsSection";
+import ReviewsFormSection from "@/components/ReviewsFormSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
@@ -32,6 +33,7 @@ export default function Home() {
       <WhyUsSection />
       <GallerySection />
       <ReviewsSection />
+      <ReviewsFormSection />
       <ContactSection />
       <Footer />
       <FloatingCTA />

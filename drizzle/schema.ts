@@ -44,3 +44,20 @@ export const reservations = mysqlTable("reservations", {
 
 export type Reservation = typeof reservations.$inferSelect;
 export type InsertReservation = typeof reservations.$inferInsert;
+
+/**
+ * Reviews/Comments table for user feedback and ratings
+ */
+export const reviews = mysqlTable("reviews", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  rating: int("rating").notNull(), // 1-5 stars
+  comment: text("comment").notNull(),
+  status: mysqlEnum("status", ["pending", "approved", "rejected"]).default("pending").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Review = typeof reviews.$inferSelect;
+export type InsertReview = typeof reviews.$inferInsert;

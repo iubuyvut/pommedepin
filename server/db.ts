@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, reservations, InsertReservation, Reservation } from "../drizzle/schema";
+import { InsertUser, users, reservations, InsertReservation, Reservation, reviews, InsertReview, Review } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -110,4 +110,43 @@ export async function getReservationById(id: number): Promise<Reservation | unde
 
   const result = await db.select().from(reservations).where(eq(reservations.id, id)).limit(1);
   return result.length > 0 ? result[0] : undefined;
+}
+
+export async function createReview(review: InsertReview): Promise<Review> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(reviews).values(review);
+  const id = result[0].insertId;
+  
+  const created = await db.select().from(reviews).where(eq(reviews.id, Number(id))).limit(1);
+  return created[0];
+}
+
+export async function getApprovedReviews(limit: number = 10): Promise<Review[]> {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  const result = await db
+    .select()
+    .from(reviews)
+    .where(eq(reviews.status, "approved"))
+    .orderBy(reviews.createdAt)
+    .limit(limit);
+  
+  return result;
+}
+
+export async function getAllReviews(): Promise<Review[]> {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  const result = await db.select().from(reviews).orderBy(reviews.createdAt);
+  return result;
 }
